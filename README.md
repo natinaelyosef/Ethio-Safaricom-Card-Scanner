@@ -1,3 +1,4 @@
+You can found apk to install im you phone in  https://github.com/natinaelyosef/Ethio-Safaricom-Card-Scanner/tree/main/apk 
 # Ethio & Safaricom Card Scanner
 
 Photograph a paper recharge card for **Ethio telecom** or **Safaricom
