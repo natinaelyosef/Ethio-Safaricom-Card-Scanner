@@ -1,0 +1,364 @@
+{
+  "@@locale": "en",
+
+  "appSubtitle": "Recharge Card Scanner",
+  "homeTab": "Home",
+  "settingsTab": "Settings",
+  "selectProvider": "Select {provider}",
+  "@selectProvider": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+
+  "scanRechargeCard": "Scan Recharge Card",
+  "scanningCamera": "Scanning camera",
+  "autoReadBadge": "AUTO READ",
+  "tapOpenLivePreview": "Tap to open the live camera preview",
+  "cameraPreviewCaption": "Camera preview opens here when you start scanning",
+  "fromGallery": "From Gallery",
+  "typeCode": "Type Code",
+  "checkBalance": "Check Balance",
+  "checkingEllipsis": "Checking…",
+  "offlinePrivacyFooter": "Offline & private: scanning, OCR, and manual entry work without internet. Nothing is uploaded. Scan history is off unless you turn it on in Settings.",
+  "recentScansTitle": "Recent scans (this device only)",
+  "recentScanTime": "Time: {time}",
+  "@recentScanTime": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  },
+  "simFor": "SIM for {provider}",
+  "@simFor": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "simActive": "SIM {slot} · Active",
+  "@simActive": {
+    "placeholders": {
+      "slot": { "type": "int" }
+    }
+  },
+  "simInactive": "SIM {slot} · Inactive",
+  "@simInactive": {
+    "placeholders": {
+      "slot": { "type": "int" }
+    }
+  },
+  "simName": "SIM {slot} · {name}",
+  "@simName": {
+    "placeholders": {
+      "slot": { "type": "int" },
+      "name": { "type": "String" }
+    }
+  },
+  "defaultValue": "Default",
+  "independentDisclaimer": "{appName} is an independent scanner app — not affiliated with Ethio telecom or Safaricom. USSD codes verified from public carrier guidance.",
+  "@independentDisclaimer": {
+    "placeholders": {
+      "appName": { "type": "String" }
+    }
+  },
+
+  "cameraPaused": "Camera paused",
+  "reopenCameraOrTypePin": "Reopen the camera or type the PIN",
+  "openCamera": "Open camera",
+  "autoReadingCard": "Auto-reading the card…",
+  "analyzingPhoto": "Analyzing photo…",
+  "autoScanningHint": "Auto-scanning — just hold the card inside the frame",
+  "scanAutoReadHint": "Fill the frame with the printed digits — the app reads them automatically.",
+  "readingLive": "Reading: {text}",
+  "@readingLive": {
+    "placeholders": {
+      "text": { "type": "String" }
+    }
+  },
+  "torchOn": "Torch on",
+  "torchOff": "Torch off",
+  "chooseFromGallery": "Choose from gallery",
+  "captureNowOptional": "Capture now (optional, auto-scan is on)",
+  "typePinManually": "Type PIN manually",
+  "stopCamera": "Stop camera",
+
+  "checkRecognizedPin": "Check the recognized PIN",
+  "capturedPhotoNote": "Captured photo — kept on this device only, never uploaded.",
+  "digitCount": "{count} digits",
+  "@digitCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "compareDigitsHelp": "Compare with the printed card digit by digit — OCR can mistake similar-looking numbers. You can fix any digit here before continuing.",
+  "confirmAndRecharge": "Confirm & Recharge",
+  "retake": "Retake",
+  "gallery": "Gallery",
+  "discard": "Discard",
+  "photoPreviewUnavailable": "Photo preview unavailable",
+  "readyToRecharge": "Ready to recharge",
+  "ussdThatWillDial": "USSD that will dial",
+  "openingUssd": "Opening USSD…",
+  "rechargeProvider": "Recharge {provider}",
+  "@rechargeProvider": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "balance": "Balance",
+  "editCode": "Edit code",
+  "scanNextCard": "Scan the next card",
+  "codeNeedsDigits": "{provider} code needs at least 6 digits",
+  "@codeNeedsDigits": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+
+  "dialCodeYourself": "Dial this code yourself",
+  "dialSteps": "1. Open your Phone  2. Type or paste the code  3. Press Call  4. The carrier pop-up shows the result.",
+  "copiedToClipboard": "Copied to clipboard",
+  "copy": "Copy",
+  "done": "Done",
+  "networkReply": "Network reply",
+  "rechargeRequestSentTo": "Recharge request sent to {provider}.",
+  "@rechargeRequestSentTo": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "confirmRecharge": "Confirm recharge",
+  "providerDigits": "{provider} · {count} digits",
+  "@providerDigits": {
+    "placeholders": {
+      "provider": { "type": "String" },
+      "count": { "type": "int" }
+    }
+  },
+  "confirmRechargeBody": "The app sends this request straight to the network — when your phone supports in-app USSD the network's own reply appears right here inside the app. On devices that refuse in-app sessions the carrier pop-up shows over this screen instead. Results are never invented.",
+  "duplicateWarning": "You already submitted this same PIN less than 3 minutes ago. Submitting it again will not add credit twice — only continue if the first attempt definitely failed.",
+  "dualSimNote": "On phones with two SIMs the system may ask which SIM to dial with — pick the one you want charged.",
+  "cancel": "Cancel",
+  "runUssd": "Run USSD",
+  "blockedManualHint": "The in-app session could not complete on this phone. Allow the \"Phone\" permission (Settings → Apps → {appName} → Permissions) and try again — or copy the code below.",
+  "@blockedManualHint": {
+    "placeholders": {
+      "appName": { "type": "String" }
+    }
+  },
+  "iosRechargeManualHint": "Apple does not allow apps to start USSD sessions, so please dial the code shown below yourself. Your {provider} balance updates in their pop-up.",
+  "@iosRechargeManualHint": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "iosBalanceManualHint": "iOS does not allow apps to run USSD codes, so the balance cannot be retrieved inside the app on this platform. Dial the code below in the Phone app to see your {provider} balance.",
+  "@iosBalanceManualHint": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "networkNoTextReply": "(The network replied, but with no text.)",
+
+  "settingsTitle": "Settings",
+  "languageTitle": "Language",
+  "languageDescription": "Choose the language used in the app.",
+  "english": "English",
+  "amharic": "አማርኛ",
+  "appearanceTitle": "Appearance",
+  "appearanceDescription": "Pick the theme the app uses on this device.",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "defaultProviderTitle": "Default provider",
+  "defaultProviderDescription": "The network the app selects first when you open it.",
+  "providerRechargeBalance": "Recharge: {recharge} · Balance: {balance}",
+  "@providerRechargeBalance": {
+    "placeholders": {
+      "recharge": { "type": "String" },
+      "balance": { "type": "String" }
+    }
+  },
+  "simTitle": "SIM for recharge & balance",
+  "simDescription": "Choose which SIM card sends each network's USSD request.",
+  "simExplanation": "On a dual-SIM phone, choose which SIM runs each provider's USSD session. When no SIM is chosen, the app auto-matches by carrier name, or uses the device default.",
+  "noSimDetected": "No SIM detected (or the Phone permission was denied).",
+  "oneSimDetected": "One SIM detected — it will be used automatically.",
+  "refreshSimList": "Refresh SIM list",
+  "historyTitle": "Local scan history",
+  "historyDescription": "Stored on this device only — never uploaded.",
+  "saveRecentScans": "Save recent scans",
+  "saveRecentScansSubtitle": "Off by default. When on, only a masked code (first 4 digits + length), provider and time are stored on this device — never the full code.",
+  "clearHistoryCount": "Clear history ({count})",
+  "@clearHistoryCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "clearHistoryTitle": "Clear scan history?",
+  "clearHistoryBody": "Every entry stored on this device will be deleted. This restores the initial privacy state of the app.",
+  "delete": "Delete",
+  "scanHistoryCleared": "Scan history cleared",
+  "ussdReaderTitle": "Carrier USSD reader",
+  "ussdReaderDescription": "Lets the app read the network's own pop-up reply.",
+  "ussdReaderEnabled": "Enabled — carrier replies are read inside the app.",
+  "ussdReaderDisabled": "Off — the carrier pop-up cannot be read by the app.",
+  "ussdReaderExplanation": "Some phones refuse the in-app USSD API, so the carrier shows its own pop-up. To parse your balance or recharge reply and display it under the Home screen, the app needs the Android accessibility service. It only observes phone/dialer windows for a few seconds while an app request is running; nothing is stored or uploaded, and you can turn it off at any time.",
+  "reviewAccessibilitySetting": "Review accessibility setting",
+  "enableInAccessibilitySettings": "Enable in accessibility settings",
+  "refreshStatus": "Refresh status",
+  "scanningHelpTitle": "Scanning help",
+  "scanningHelpDescription": "Short tips for a clean first-time read.",
+  "scanningTip1": "Hold the card flat and steady; the frame guides the voucher area.",
+  "scanningTip2": "Use good lighting. Tap the torch icon in dim rooms.",
+  "scanningTip3": "Scratch the silver layer fully so every digit is clear.",
+  "scanningTip4": "The camera scans automatically — no shutter tap needed.",
+  "scanningTip5": "The largest number on the card is selected as the PIN; always check it against the paper before confirming.",
+  "scanningTip6": "After you confirm the PIN, the app recharges automatically and shows the carrier reply in the app.",
+  "privacyTitle": "Privacy",
+  "privacyDescription": "Offline, on-device, and account-free.",
+  "privacyBody": "• OCR runs on-device (Google ML Kit). No card image or digit ever leaves the phone.\n• No accounts, no ads, no analytics, no telemetry of any kind.\n• Card photos stay on this device; originals picked from the gallery are never modified or deleted.\n• Full voucher codes are never written to storage.\n• The optional USSD reader only sees phone/dialer windows during an app request and stores nothing.\n• Recharge and balance USSD sessions run inside the carrier network, which needs mobile signal — that session belongs to your carrier.",
+  "aboutTitle": "About {appName}",
+  "@aboutTitle": {
+    "placeholders": {
+      "appName": { "type": "String" }
+    }
+  },
+  "versionLine": "Version {version} ({build})",
+  "@versionLine": {
+    "placeholders": {
+      "version": { "type": "String" },
+      "build": { "type": "String" }
+    }
+  },
+  "aboutBody": "{appName} scans paper recharge vouchers for Ethio telecom and Safaricom Ethiopia, corrects the recognized digits with you, and starts the carrier-approved USSD recharge sessions on Android. It is an independent utility and is not officially endorsed by, affiliated with, or a substitute for either operator's own apps.",
+  "@aboutBody": {
+    "placeholders": {
+      "appName": { "type": "String" }
+    }
+  },
+  "developerLabel": "DEVELOPER",
+  "openDeveloperPortfolio": "Open {developer} portfolio in browser",
+  "@openDeveloperPortfolio": {
+    "placeholders": {
+      "developer": { "type": "String" }
+    }
+  },
+  "offlineBadge": "Offline • No account • No ads",
+  "couldNotOpenPortfolio": "Could not open the portfolio link.",
+
+  "statusCameraPermission": "Camera permission is needed to photograph the card. Grant it in system settings, or type the PIN manually.",
+  "statusNoCamera": "No camera was found on this device. Type the PIN manually.",
+  "statusCameraStartFailed": "Camera could not start ({reason}). You can still pick a photo from the gallery or type the PIN.",
+  "@statusCameraStartFailed": {
+    "placeholders": {
+      "reason": { "type": "String" }
+    }
+  },
+  "statusCameraNotOpen": "The camera is not open. Tap \"Open camera\" first, or choose a photo from the gallery.",
+  "statusPhotoFailed": "The photo could not be taken ({reason}). Try again, or type the PIN manually.",
+  "@statusPhotoFailed": {
+    "placeholders": {
+      "reason": { "type": "String" }
+    }
+  },
+  "statusGalleryFailed": "Could not open the gallery ({reason}). You can take a photo instead.",
+  "@statusGalleryFailed": {
+    "placeholders": {
+      "reason": { "type": "String" }
+    }
+  },
+  "statusNoPinAuto": "No PIN yet — move closer, keep the digits sharp and inside the frame. More light helps.",
+  "statusNoPinFromPhoto": "No recharge PIN could be read from this photo — {seen} Move closer so the digits fill the frame, avoid glare, and try again — or type the PIN manually.",
+  "@statusNoPinFromPhoto": {
+    "placeholders": {
+      "seen": { "type": "String" }
+    }
+  },
+  "statusNothingReadable": "nothing readable was found.",
+  "statusReadThis": "this was read: \"{text}\".",
+  "@statusReadThis": {
+    "placeholders": {
+      "text": { "type": "String" }
+    }
+  },
+  "statusScanFailed": "Scanning failed ({reason}). Try again or type the PIN.",
+  "@statusScanFailed": {
+    "placeholders": {
+      "reason": { "type": "String" }
+    }
+  },
+  "statusPinRecognized": "PIN recognized. Compare it with the paper card and fix any wrong digit before continuing — the printed card is the reference.",
+  "validationEnterPin": "Enter or scan a voucher PIN first.",
+  "validationTooShort": "Too short to be a voucher PIN (needs at least 6 digits).",
+  "validationTooLong": "Too long for a voucher PIN (max 24 digits).",
+  "validationUnusualLength": "Unusual length: a typical PIN has {min}–{max} digits. Check the card again, or continue if you are sure.",
+  "@validationUnusualLength": {
+    "placeholders": {
+      "min": { "type": "int" },
+      "max": { "type": "int" }
+    }
+  },
+  "statusPinTooShortForRecharge": "That PIN is not long enough for a recharge. Fix the digits and confirm again.",
+  "statusNetworkAnswered": "The network answered below.",
+  "statusDirectRecharge": "{provider} received your recharge request — finish it in the carrier pop-up shown over this screen and wait for their confirmation SMS. The app cannot see whether it succeeded.",
+  "@statusDirectRecharge": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "statusRechargeBlocked": "The USSD session could not complete in-app. Allow the \"Phone\" permission (Android Settings → Apps → {appName} → Permissions) and try again, or use the copy option.",
+  "@statusRechargeBlocked": {
+    "placeholders": {
+      "appName": { "type": "String" }
+    }
+  },
+  "statusRechargeManual": "Apple does not allow apps to launch USSD codes. Copy the code shown below and dial it yourself in the Phone app.",
+  "statusRechargeFailed": "The USSD session failed on the network side. Try again, or use the copy option.",
+  "balanceNoText": "The network replied but sent no balance text. Try again.",
+  "balanceViaSms": "{provider} answered via SMS — check your messages for the balance. You can also try the query again.",
+  "@balanceViaSms": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "balanceDirect": "{provider} opened its balance prompt in a system pop-up over this screen — the app cannot read that dialog. The number shown there is the real balance.",
+  "@balanceDirect": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "balanceBlocked": "The balance query could not run inside the app. Allow the \"Phone\" permission (Android Settings → Apps → {appName} → Permissions) and try again.",
+  "@balanceBlocked": {
+    "placeholders": {
+      "appName": { "type": "String" }
+    }
+  },
+  "balanceManual": "iOS does not allow apps to run USSD codes. The app cannot retrieve the balance in-app on this platform.",
+  "balanceFailed": "The balance query failed on the network side. Check your connection and try again.",
+  "balanceCheckingTitle": "Checking balance · {provider}",
+  "@balanceCheckingTitle": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "balanceCheckingBody": "Sending the balance request to the network. The reply appears here without leaving the app.",
+  "balanceTitle": "Balance · {provider}",
+  "@balanceTitle": {
+    "placeholders": {
+      "provider": { "type": "String" }
+    }
+  },
+  "chipNoBalance": "No balance read",
+  "chipLiveReply": "Live reply",
+  "chipCarrierReply": "Carrier reply",
+  "parsedFromCarrier": "Parsed from the carrier reply",
+  "carrierReplyVerbatim": "Carrier reply (verbatim)",
+  "noRecognizableAmount": "The reply contained no recognizable balance amount, so only the raw carrier text is shown. Nothing was guessed.",
+  "noBalanceRead": "No balance was read. Nothing was guessed or stored.",
+  "liveReplyAt": "Live reply received at {time}. The app displays the network text verbatim.",
+  "@liveReplyAt": {
+    "placeholders": {
+      "time": { "type": "String" }
+    }
+  }
+}

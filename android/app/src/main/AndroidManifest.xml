@@ -1,0 +1,109 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Camera scanning of paper recharge cards (runtime-requested). -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Saricom only takes still photos; strip the camera plugin's mic
+         permission so the app never asks for audio access. -->
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO"
+        tools:node="remove" />
+
+    <!-- CALL_PHONE is used only for the carrier-popup fallback when
+         in-app USSD is refused by the device. Runtime-requested after the
+         user confirms a recharge/balance action. The dialer is never
+         opened. -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- READ_PHONE_STATE lets Saricom list the installed SIMs (slot,
+         carrier name, subscription id) so the user can pick which SIM
+         runs a recharge or balance check on dual-SIM phones.
+         Runtime-requested only when the SIM list is first needed. -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- USSD/telephony actions can be carried out only on real devices. -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:label="Ethio &amp; Safaricom Card Scanner"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Opt-in reader for the carrier's USSD pop-up (fallback path).
+             Disabled by default; the user enables it in Android
+             accessibility settings, and it only observes phone/dialer
+             windows for a few seconds around a Saricom USSD request. -->
+        <service
+            android:name=".UssdAccessibilityService"
+            android:exported="true"
+            android:label="Ethio &amp; Safaricom Card Scanner USSD reader"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/ussd_accessibility" />
+        </service>
+        <!-- ConnectionService used only to place the USSD fallback call on a
+             specific SIM subscription on dual-SIM phones. See
+             DualSimCallService.kt. -->
+        <service
+            android:name=".DualSimCallService"
+            android:exported="true"
+            android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">
+            <intent-filter>
+                <action android:name="android.telecom.ConnectionService" />
+            </intent-filter>
+        </service>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+        <!-- Dialling fallbacks (ACTION_CALL / ACTION_DIAL) need visibility
+             into handlers of tel: URIs on Android 11+ package visibility. -->
+        <intent>
+            <action android:name="android.intent.action.CALL"/>
+            <data android:scheme="tel"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+            <data android:scheme="tel"/>
+        </intent>
+    </queries>
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged|typeViewTextChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/ussd_accessibility_description"
+    android:notificationTimeout="100"
+    android:settingsActivity="com.saricom.app.MainActivity"
+    android:packageNames="com.android.phone,com.android.dialer,com.google.android.dialer,com.android.incallui,com.android.server.telecom,com.samsung.android.incallui,com.sec.android.app.dialer,com.oplus.phone,com.coloros.phone,com.oneplus.phone,com.huawei.phone,com.hihonor.phone,com.miui.securitycenter" />

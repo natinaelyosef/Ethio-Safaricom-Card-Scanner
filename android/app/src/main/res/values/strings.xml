@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ussd_accessibility_description">Ethio &amp; Safaricom Card Scanner reads the carrier USSD pop-up only while a recharge or balance request is running, so the reply (for example your balance) can be shown inside the app. Nothing is stored or uploaded.</string>
+</resources>
